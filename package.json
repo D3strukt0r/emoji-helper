@@ -1,22 +1,83 @@
 {
   "name": "emoji-helper",
-  "title": "Emoji Cheatsheet for GitHub, Basecamp etc.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A very simple and useful reference for the codes that can be used to generate Emojis on popular sites like GitHub or Basecamp.",
-  "author": "Johann Hofmann",
-  "homepage": "http://github.com/johannhof/emoji-helper",
-  "repository": "http://github.com/johannhof/emoji-helper",
+  "keywords": [
+    "chrome",
+    "extension",
+    "emoji"
+  ],
+  "homepage": "https://github.com/D3strukt0r/emoji-helper",
+  "bugs": {
+    "url": "https://github.com/D3strukt0r/emoji-helper/issues",
+    "email": "gh-contact@d3st.dev"
+  },
   "license": "MIT",
+  "author": {
+    "name": "D3strukt0r",
+    "email": "gh-contact@d3st.dev",
+    "url": "https://github.com/D3strukt0r"
+  },
+  "funding": [
+    {
+      "type": "github-sponsors",
+      "url": "https://github.com/sponsors/D3strukt0r"
+    },
+    {
+      "type": "patreon",
+      "url": "https://www.patreon.com/d3strukt0r"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/d3strukt0r"
+    }
+  ],
+  "repository": "github:D3strukt0r/emoji-helper",
+  "scripts": {
+    "dev:ts": "tsc --watch --noEmit",
+    "dev:app": "vite",
+    "dev": "npm-run-all --parallel dev:*",
+    "ts:check": "tsc --noEmit",
+    "build:app": "vite build",
+    "build": "npm-run-all --serial ts:check build:app",
+    "preview": "vite preview",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write .",
+    "ts-node": "ts-node --esm --project tsconfig.tsnode.json",
+    "setup:fetch-images": "nr ts-node ./bin/fetch-images.ts",
+    "setup:sprite": "nr ts-node ./bin/sprite.ts",
+    "setup:build-icons": "nr ts-node ./bin/build-icons.ts",
+    "setup": "npm-run-all --parallel setup:*"
+  },
   "devDependencies": {
-    "fs-extra": "^3.0.1",
-    "gulp": "^3.9.0",
-    "gulp-image-resize": "^0.12.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-zip": "^4.0.0",
-    "gulp.spritesmith": "^6.5.0",
-    "imagemin-pngquant": "^4.2.2",
-    "request": "^2.81.0",
-    "request-promise-native": "^1.0.4",
-    "vinyl-buffer": "^1.0.0"
-  }
+    "@antfu/ni": "^0.21.5",
+    "@crxjs/vite-plugin": "^1.0.14",
+    "@tsconfig/esm": "^1.0.4",
+    "@tsconfig/node20": "^20.1.0",
+    "@tsconfig/strictest": "^2.0.1",
+    "@types/chrome": "^0.0.241",
+    "@types/node": "^20.4.2",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "axios": "^1.4.0",
+    "eslint": "^8.45.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.0.0",
+    "sharp": "^0.32.4",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.6.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.4",
+    "vite-plugin-pug-transformer": "^1.0.3"
+  },
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "private": true,
+  "type": "module"
 }

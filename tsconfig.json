@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "@tsconfig/node20/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json",
+  ],
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    // To import package.json
+    "resolveJsonModule": true,
+    // https://stackoverflow.com/a/70748402/4156752: To access dataset property with "."
+    "noPropertyAccessFromIndexSignature": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+    },
+  },
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js"],
+}

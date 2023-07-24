@@ -4,17 +4,17 @@ An Emoji cheat sheet extension for Chromium and Firefox based browsers. Built be
 
 Install from the [Firefox addon page][firefox-add-on] or the [Chrome addon page][chrome-web-store]
 
-[![Dynamic Badge -> License -> GitHub](https://img.shields.io/github/license/D3strukt0r/emoji-helper?label=License)](LICENSE.txt)
-[![Static Badge -> Contributor Covenant-2.0-4baaaa](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa)](CODE_OF_CONDUCT.md)
+[![License -> GitHub](https://img.shields.io/github/license/D3strukt0r/emoji-helper?label=License)](LICENSE.txt)
+[![Static Badge](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa)](CODE_OF_CONDUCT.md)
 
-[![Dynamic Badge -> Downloads -> Chrome Web Store](https://img.shields.io/chrome-web-store/users/jabopobgcpjmedljpbcaablpmlmfcogm?label=Chrome%20Users))][chrome-web-store]
-[![Dynamic Badge -> Downloads -> Mozilla Add-on (2)](https://img.shields.io/amo/users/emoji-cheatsheet?label=Firefox%20Users)][firefox-add-on]
+[![Downloads -> Chrome Web Store](https://img.shields.io/chrome-web-store/users/jabopobgcpjmedljpbcaablpmlmfcogm?label=Chrome%20Users))][chrome-web-store]
+[![Downloads -> Mozilla Add-on (2)](https://img.shields.io/amo/users/emoji-cheatsheet?label=Firefox%20Users)][firefox-add-on]
 
-[![Dynamic Badge -> Downloads -> Mozilla Add-on (1)](https://img.shields.io/amo/dw/emoji-cheatsheet?label=Firefox%20Downloads)][firefox-add-on]
+[![Downloads -> Mozilla Add-on (1)](https://img.shields.io/amo/dw/emoji-cheatsheet?label=Firefox%20Downloads)][firefox-add-on]
 
-[![Dynamic Badge -> Version -> Chrome Web Store](https://img.shields.io/chrome-web-store/v/jabopobgcpjmedljpbcaablpmlmfcogm?label=Chrome%20Web%20Store%20Version)][chrome-web-store]
-[![Dynamic Badge -> Version -> Mozilla Add-on](https://img.shields.io/amo/v/emoji-cheatsheet?label=Firefox%20Add-On%20Version)][firefox-add-on]
-[![Dynamic Badge -> Version -> GitHub release (with filter)](https://img.shields.io/github/v/release/johannhof/emoji-helper?label=GitHub%20Release)][gh-releases]
+[![Version -> Chrome Web Store](https://img.shields.io/chrome-web-store/v/jabopobgcpjmedljpbcaablpmlmfcogm?label=Chrome%20Web%20Store%20Version)][chrome-web-store]
+[![Version -> Mozilla Add-on](https://img.shields.io/amo/v/emoji-cheatsheet?label=Firefox%20Add-On%20Version)][firefox-add-on]
+[![Version -> GitHub release (with filter)](https://img.shields.io/github/v/release/johannhof/emoji-helper?label=GitHub%20Release)][gh-releases]
 
 ## Getting Started
 
@@ -25,7 +25,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 * [Git](https://git-scm.com/) - Run `brew install git` (Only for macOS)
-* [Node.js](https://nodejs.org/) - Run `brew install node` (Only for macOS)
+* [Node.js](https://nodejs.org/) 14.18.0+ (because of [Vite.js](https://vitejs.dev/)) - Run `brew install node` (Only for macOS)
 * [pnpm](https://pnpm.js.org/) - Run `npm install -g pnpm`
 * [Brave](https://brave.com/) or any browser that supports Manifest V3 (Chrome 88+, Firefox 109+ (101+ as Dev Preview)) - Run `brew install --cask brave-browser` (Only for macOS)
 
@@ -47,18 +47,18 @@ pnpm install
 Run the setup scripts to prepare the emojis and icons
 
 ```shell
-pnpm run setup
+pnpm setup
 # or separately
-pnpm run setup:fetch-images
-pnpm run setup:sprite
-pnpm run setup:build-icons
+pnpm setup:fetch-images
+pnpm setup:sprite
+pnpm setup:build-icons
 ```
 
 Our Emoji list is taken from the [gemoji project](https://github.com/github/gemoji) (https://api.github.com/emojis). Whenever GitHub updates their list of Emoji, you can run
 
 ```shell
-pnpm run setup:fetch-images
-pnpm run setup:sprite
+pnpm setup:fetch-images
+pnpm setup:sprite
 ```
 
 to download the updated images and generate a new sprite.
@@ -68,7 +68,7 @@ to download the updated images and generate a new sprite.
 To watch for changes and rebuild the extension on change, run
 
 ```shell
-pnpm run dev
+pnpm dev
 ```
 
 The generated files are located in the `./dist/` folder. To load the build folder into the browser, follow the instructions below.
@@ -78,7 +78,7 @@ The generated files are located in the `./dist/` folder. To load the build folde
 To create a production ready build, run
 
 ```shell
-pnpm run build
+pnpm build
 ```
 
 The generated files are located in the `./dist/` folder. To load the build folder into the browser, follow the instructions below.
@@ -107,7 +107,7 @@ You can follow this guide to install a WebExtension temporarily: <https://develo
 To create a zipped release package of the extension that can be uploaded to one of the stores, run
 
 ```shell
-pnpm run release
+pnpm release
 ```
 
 This should build the codebase and output a zip file under `web-ext-artifacts`.

@@ -4,7 +4,7 @@ import { version, description, author, homepage } from './package.json';
 const title = 'Emoji Cheatsheet for GitHub, Basecamp etc.';
 const names = {
   build: title,
-  serve: `[INTERNAL] ${title}`,
+  serve: `[HMR] ${title}`,
 };
 
 export default defineManifest(async (env) => ({

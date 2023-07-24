@@ -87,9 +87,9 @@ The generated files are located in the `./dist/` folder. To load the build folde
 
 #### Chromium based browsers (e.g. Chrome, Brave, Edge)
 
-Follow this guide <https://developer.chrome.com/extensions/getstarted#unpacked> and select the `./dist/` folder. Or following is the TLDR:
+Follow this guide https://developer.chrome.com/extensions/getstarted#unpacked and select the `./dist/` folder. Or following is the TLDR:
 
-1. Navigate to <chrome://extensions/>.
+1. Navigate to [chrome://extensions/](chrome://extensions/).
 2. Turn on developer mode using the 'Developer mode' switch in the upper right hand corner of the page.
 3. Click 'Load Unpacked' and select the `./dist/` directory.
 
@@ -97,9 +97,9 @@ Follow this guide <https://developer.chrome.com/extensions/getstarted#unpacked> 
 
 Unsigned addons can't be install in firefox permanently but addons can be installed temporarily.
 
-You can follow this guide to install a WebExtension temporarily: <https://developer.mozilla.org/Add-ons/WebExtensions/Temporary_Installation_in_Firefox>. Or following is the TLDR:
+You can follow this guide to install a WebExtension temporarily: https://developer.mozilla.org/Add-ons/WebExtensions/Temporary_Installation_in_Firefox. Or following is the TLDR:
 
-1. Navigate to <about:debugging>.
+1. Navigate to [about:debugging](about:debugging).
 2. Click "Load Temporary Add-on" and choose the generated zip file.
 
 ### Release

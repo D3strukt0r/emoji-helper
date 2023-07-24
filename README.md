@@ -7,7 +7,7 @@ Install from the [Firefox addon page][firefox-add-on] or the [Chrome addon page]
 [![License -> GitHub](https://img.shields.io/github/license/D3strukt0r/emoji-helper?label=License)](LICENSE.txt)
 [![Static Badge](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa)](CODE_OF_CONDUCT.md)
 
-[![Downloads -> Chrome Web Store](https://img.shields.io/chrome-web-store/users/jabopobgcpjmedljpbcaablpmlmfcogm?label=Chrome%20Users))][chrome-web-store]
+[![Downloads -> Chrome Web Store](https://img.shields.io/chrome-web-store/users/jabopobgcpjmedljpbcaablpmlmfcogm?label=Chrome%20Users)][chrome-web-store]
 [![Downloads -> Mozilla Add-on (2)](https://img.shields.io/amo/users/emoji-cheatsheet?label=Firefox%20Users)][firefox-add-on]
 
 [![Downloads -> Mozilla Add-on (1)](https://img.shields.io/amo/dw/emoji-cheatsheet?label=Firefox%20Downloads)][firefox-add-on]

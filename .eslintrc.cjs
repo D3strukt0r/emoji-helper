@@ -1,3 +1,4 @@
+// https://eslint.org/docs/user-eguide/configuring/
 module.exports = {
   root: true,
   extends: [

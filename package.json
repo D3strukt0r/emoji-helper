@@ -73,7 +73,8 @@
     "tslib": "^2.6.0",
     "typescript": "^5.1.6",
     "vite": "^4.4.4",
-    "vite-plugin-pug-transformer": "^1.0.3"
+    "vite-plugin-pug-transformer": "^1.0.3",
+    "web-ext": "^7.6.2"
   },
   "engines": {
     "node": ">=14.18.0"

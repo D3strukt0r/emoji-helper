@@ -15,7 +15,7 @@ module.exports = {
   plugins: ['import', '@typescript-eslint'],
   rules: {
     'max-len': ['error', { code: 120 }], // Max 120 characters wide
-    indent: ['error', 2, {
+    indent: ['error', 2, { // Use indentation of 2
       CallExpression: {
         arguments: 1,
       },
@@ -31,10 +31,10 @@ module.exports = {
       ObjectExpression: 1,
       SwitchCase: 1,
       ignoredNodes: ['ConditionalExpression'],
-    }], // Use indentation of 2
+    }],
     semi: ['error', 'always'], // Always add ;
     'no-restricted-syntax': ['off', { selector: 'ForOfStatement' }], // Allow for-of loops
-    'no-underscore-dangle': ['error', { 'allow': ['__filename', '__dirname'] }], // Allow _meta for api objects
+    'no-underscore-dangle': ['error', { 'allow': ['__filename', '__dirname'] }], // Allow custom underscore dangles
     'no-unused-vars': 'off', // Turn off unused vars, because it doesn't work with typescript ...
     '@typescript-eslint/no-unused-vars': ['error'], // ... and use the typescript version instead
     'no-shadow': 'off', // Turn off shadowing, because it doesn't work with typescript ...

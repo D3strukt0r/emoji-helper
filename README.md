@@ -145,5 +145,5 @@ A list of used libraries and code with their licenses can be seen in the [ACKNOW
 [firefox-add-on]: https://addons.mozilla.org/en-US/firefox/addon/emoji-cheatsheet/
 
 [gh-releases]: https://github.com/D3strukt0r/emoji-helper/releases
-[gh-tags]: https://github.com/D3strukt0r/dotfiles/tags
-[gh-contributors]: https://github.com/D3strukt0r/dotfiles/contributors
+[gh-tags]: https://github.com/D3strukt0r/emoji-helper/tags
+[gh-contributors]: https://github.com/D3strukt0r/emoji-helper/contributors

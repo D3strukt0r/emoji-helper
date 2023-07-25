@@ -14,18 +14,18 @@ export default defineManifest(async (env) => ({
   description,
   // https://stackoverflow.com/a/60184542/4156752
   icons: {
-    16: 'icon-16.png', // used as the favicon for an extension's pages
-    32: 'icon-32.png',
-    48: 'icon-48.png', // used in the extensions management page (chrome://extensions)
-    128: 'icon-128.png', // used during installation and by the Chrome Web Store
+    16: 'icons/16.png', // used as the favicon for an extension's pages
+    32: 'icons/32.png',
+    48: 'icons/48.png', // used in the extensions management page (chrome://extensions)
+    128: 'icons/128.png', // used during installation and by the Chrome Web Store
   },
   action: {
     default_popup: 'src/popup/index.html',
     // https://stackoverflow.com/a/60184542/4156752
     default_icon: {
-      16: 'icon-16.png',
-      24: 'icon-24.png',
-      32: 'icon-32.png',
+      16: 'icons/16.png',
+      24: 'icons/24.png',
+      32: 'icons/32.png',
     },
   },
   author: author.email,

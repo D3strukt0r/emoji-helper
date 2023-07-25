@@ -280,7 +280,8 @@ dist/
 vite.config.js.timestamp-*.mjs
 
 # Download emoji list locally
+public/img/emoji/*.png
 #public/img/emoji.json
 
 # Build icons locally
-public/icon-*.png
+public/icons/*.png

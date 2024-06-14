@@ -39,7 +39,7 @@ export default defineManifest(async (env) => ({
   homepage_url: homepage,
   minimum_chrome_version: '88', // Due to Manifest V3 and "chrome.scripting"
   offline_enabled: true,
-  permissions: [
+  optional_permissions: [
     'activeTab',
     'clipboardWrite',
     'storage',

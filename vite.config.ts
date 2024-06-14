@@ -22,9 +22,42 @@ export default defineConfig({
     },
   },
   // Enable for debugging locally
-  // build: {
-  //   minify: false,
-  // },
+  build: {
+    minify: false,
+    rollupOptions: {
+      output: {
+        assetFileNames: (assetInfo) => {
+          // Place asset in each corresponding folder "build/{img,font,etc.}/*".
+          const info = assetInfo.name.split('.');
+          let extType = info[info.length - 1];
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico|avif|webp/i.test(extType)) {
+            extType = 'img';
+          } else if (/woff2?|otf|ttf|eot/.test(extType)) {
+            extType = 'font';
+          }
+
+          console.log('assetFileNames', {name: assetInfo.name, type: assetInfo.type}, extType);
+          if (assetInfo.name.startsWith('src/')) {
+            return `${extType}/[name]2.[hash][extname]`;
+          }
+
+          return `${extType}/[name].[hash][extname]`;
+        },
+        chunkFileNames: (chunkInfo) => {
+          console.log('chunkFileNames', {name: chunkInfo.name});
+          // if name ends with .html, remove it
+          if (chunkInfo.name.endsWith('.html')) {
+            return `js/${chunkInfo.name.substring(0, chunkInfo.name.length - '.html'.length)}.[hash].js`;
+          }
+          return `js/[name].[hash].js`;
+        },
+        entryFileNames: (chunkInfo) => {
+          console.log('entryFileNames', {name: chunkInfo.name});
+          return `js/[name].[hash].js`;
+        },
+      },
+    },
+  },
   server: {
     // Even though it's the default, still needed for CRXJS
     // TODO: Fix Dev Server, still doesn't resolve all files (e.g. CSS)

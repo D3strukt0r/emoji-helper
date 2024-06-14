@@ -6,6 +6,8 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
+    "moduleResolution": "bundler",
+
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     // To import package.json
     "resolveJsonModule": true,
